@@ -21,10 +21,11 @@ angular.module('fireApp', ['ui.router']).config(function ($stateProvider, $urlRo
 });
 'use strict';
 
-angular.module('fireApp').controller('mainCtrl', function ($scope, mainSrv) {
-    $scope.mainControl = 'controller is working';
-    $scope.mainService = mainSrv.mainService;
-    $scope.test = 'it works';
+angular.module('fireApp').controller('mainCtrl', function ($scope, mainSrv, $location, $anchorScroll) {
+    $scope.scrollTo = function (id) {
+        $location.hash(id);
+        $anchorScroll();
+    };
 });
 'use strict';
 
@@ -42,7 +43,12 @@ angular.module('fireApp').controller('charactersCtrl', function ($scope) {});
 angular.module("fireApp").directive('footer', function () {
     return {
         restrict: 'AE',
-        templateUrl: 'footer/footer.html'
+        templateUrl: 'footer/footer.html',
+        controller: function controller($scope) {
+            $scope.reloadPage = function () {
+                location.reload();
+            };
+        }
     };
 });
 "use strict";
