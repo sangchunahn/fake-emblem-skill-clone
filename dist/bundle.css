@@ -204,20 +204,14 @@ img {
   width: 100%;
   height: 1100px; }
   .home-main .home-main-img {
-    display: flex;
-    justify-content: center;
+    background-image: no-repeat center;
+    background-size: cover;
+    display: block;
     width: 100%;
-    height: 632px; }
-    .home-main .home-main-img img {
-      background-image: no-repeat center;
-      background-size: cover;
-      display: block;
-      width: 100%;
-      max-width: 568px;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto;
-      border: 0; }
+    max-width: 568px;
+    height: auto;
+    margin: 0 auto;
+    border: 0; }
   .home-main .trailer-container {
     display: flex;
     justify-content: center;
@@ -494,6 +488,10 @@ img {
     width: 100%;
     height: 35px;
     background-color: black; }
+    .header .explore-bar img {
+      height: 20px;
+      margin-left: 40px;
+      margin-top: 8px; }
     .header .explore-bar .explored {
       width: 100%;
       display: flex;
@@ -511,10 +509,12 @@ img {
         margin-right: 50px;
         color: white; }
   .header .main-img {
-    display: flex;
-    width: 100%;
+    display: block;
     height: 80px;
-    justify-content: center; }
+    background-image: url(../img/logo.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: transparent; }
 
 .second-nav {
   width: 100%;
